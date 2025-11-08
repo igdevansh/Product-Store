@@ -6,13 +6,15 @@
 ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 ![Chakra UI](https://img.shields.io/badge/Chakra--UI-319795?style=for-the-badge&logo=chakraui&logoColor=white)
 
-A complete full-stack web application that allows users to manage a list of products. It demonstrates CRUD (Create, Read, Update, Delete) functionality with a modern tech stack, featuring a responsive design and a clean user interface.
+A complete full-stack web application that allows users to manage a list of products. It demonstrates CRUD (Create, Read, Update, Delete) functionality with a modern tech stack, featuring a responsive[...]
 
 ## 🎬 Demo
 
 A demo of the application in action.
 
-<video src="./demo-video.mp4" controls width="600"></video>
+[![Watch the demo](https://img.youtube.com/vi/7cdcZy1xmZU/0.jpg)](https://youtu.be/7cdcZy1xmZU)
+
+Watch the demo on YouTube: [https://youtu.be/7cdcZy1xmZU](https://youtu.be/7cdcZy1xmZU)
 
 ## ✨ Key Features
 
@@ -44,126 +46,3 @@ A demo of the application in action.
 ## 📂 Project Structure
 
 The project is organized as a monorepo with two main directories:
-
-```
-product-store/
-├── backend/         # Node.js, Express, and MongoDB logic
-│   ├── db/
-│   ├── models/
-│   ├── controllers/
-│   ├── routes/
-│   └── index.js     # Server entry point
-├── frontend/        # React, Vite, and Chakra UI application
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── store/   # Zustand state management
-│   │   └── App.jsx
-│   └── vite.config.js
-└── README.md
-```
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Node.js (v18 or newer)
-- `npm` or your favorite package manager
-- MongoDB installed and running, or a MongoDB Atlas connection string.
-
-### Backend Setup
-
-1.  **Clone the repository**:
-
-    ```bash
-    git clone https://github.com/your-username/product-store.git
-    cd product-store
-    ```
-
-2.  **Navigate to the backend directory**:
-
-    ```bash
-    cd backend
-    ```
-
-3.  **Install dependencies**:
-
-    ```bash
-    npm install
-    ```
-
-4.  **Set up environment variables**:
-    Create a `.env` file in the `backend` directory and add your MongoDB connection string:
-
-    ```env
-    MONGO_URI=your_mongodb_connection_string
-    PORT=5000
-    ```
-
-5.  **Run the backend server**:
-    ```bash
-    npm run dev
-    ```
-    The server will start on `http://localhost:5000` by default.
-
-### Frontend Setup
-
-1.  **Navigate to the frontend directory** (from the root, in a new terminal):
-
-    ```bash
-    cd frontend
-    ```
-
-2.  **Install dependencies**:
-
-    ```bash
-    npm install
-    ```
-
-3.  **Run the frontend app**:
-    ```bash
-    npm run dev
-    ```
-    The application will be available at `http://localhost:5173` (or another port if 5173 is in use).
-
-## 📝 API Endpoints
-
-The backend exposes the following RESTful API endpoints under the `/api/products` base path:
-
-| Method   | Endpoint  | Description                 |
-| :------- | :-------- | :-------------------------- |
-| `GET`    | `/`       | Get all products.           |
-| `POST`   | `/create` | Create a new product.       |
-| `PUT`    | `/:id`    | Update an existing product. |
-| `DELETE` | `/:id`    | Delete a product.           |
-
-**Request Body for `POST /create` and `PUT /:id`:**
-
-```json
-{
-  "name": "string",
-  "price": "number",
-  "image": "string"
-}
-```
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgements
-
-- [React](https://react.dev/)
-- [Chakra UI](https://chakra-ui.com/)
-- [Express.js](https://expressjs.com/)
-- [MongoDB](https://www.mongodb.com/)
-- [Vite](https://vitejs.dev/)
-- [Zustand](https://zustand-demo.pmnd.rs/)
-- [React Router](https://reactrouter.com/)
-- [Mongoose](https://mongoosejs.com/)
-
-Thank you for checking out this project! Happy coding! 🚀
