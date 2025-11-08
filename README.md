@@ -10,7 +10,8 @@ A complete full-stack web application that allows users to manage a list of prod
 
 ## 🎬 Demo
 
-A demo of the application in action.
+**Live Demo**: [https://product-store-1-03hn.onrender.com/](https://product-store-1-03hn.onrender.com/)
+
 
 [![Watch the demo](https://img.youtube.com/vi/7cdcZy1xmZU/0.jpg)](https://youtu.be/7cdcZy1xmZU)
 
