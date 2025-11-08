@@ -1,10 +1,22 @@
-# Product Store - A Full-Stack MERN Application
+# Product Store - Full-Stack MERN Application
 
-This is a simple but complete full-stack web application that allows users to manage a list of products. It demonstrates CRUD (Create, Read, Update, Delete) functionality with a modern tech stack, featuring a responsive design and a clean user interface.
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
+![Chakra UI](https://img.shields.io/badge/Chakra--UI-319795?style=for-the-badge&logo=chakraui&logoColor=white)
 
-## ✨ Features
+A complete full-stack web application that allows users to manage a list of products. It demonstrates CRUD (Create, Read, Update, Delete) functionality with a modern tech stack, featuring a responsive design and a clean user interface.
 
-- **View Products**: Display a grid of all products from the database.
+## 🎬 Demo
+
+A demo of the application in action.
+
+<video src="./demo-video.mp4" controls width="600"></video>
+
+## ✨ Key Features
+
+- **View All Products**: A responsive grid displays all products fetched from the database.
 - **Create Products**: A dedicated page with a form to add new products.
 - **Update Products**: Edit product details through an in-place dialog modal.
 - **Delete Products**: Remove products from the database.
@@ -12,7 +24,7 @@ This is a simple but complete full-stack web application that allows users to ma
 - **Light/Dark Mode**: Toggle between light and dark themes, with styles adapting accordingly.
 - **Toast Notifications**: User-friendly feedback for actions like creating, updating, or deleting products.
 
-## 🛠️ Tech Stack
+## 🛠️ Technology Stack
 
 - **Frontend**:
 
@@ -26,10 +38,32 @@ This is a simple but complete full-stack web application that allows users to ma
   - **Runtime**: [Node.js](https://nodejs.org/)
   - **Framework**: [Express.js](https://expressjs.com/)
   - **Database**: [MongoDB](https://www.mongodb.com/) (with Mongoose)
+- **Deployment**:
+  - The Node.js/Express server is configured to serve the static frontend build in a production environment.
+
+## 📂 Project Structure
+
+The project is organized as a monorepo with two main directories:
+
+```
+product-store/
+├── backend/         # Node.js, Express, and MongoDB logic
+│   ├── db/
+│   ├── models/
+│   ├── controllers/
+│   ├── routes/
+│   └── index.js     # Server entry point
+├── frontend/        # React, Vite, and Chakra UI application
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── store/   # Zustand state management
+│   │   └── App.jsx
+│   └── vite.config.js
+└── README.md
+```
 
 ## 🚀 Getting Started
-
-Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
@@ -39,34 +73,42 @@ Follow these instructions to get a copy of the project up and running on your lo
 
 ### Backend Setup
 
-1.  **Navigate to the backend directory**:
+1.  **Clone the repository**:
+
+    ```bash
+    git clone https://github.com/your-username/product-store.git
+    cd product-store
+    ```
+
+2.  **Navigate to the backend directory**:
 
     ```bash
     cd backend
     ```
 
-2.  **Install dependencies**:
+3.  **Install dependencies**:
 
     ```bash
     npm install
     ```
 
-3.  **Create an environment file**:
+4.  **Set up environment variables**:
     Create a `.env` file in the `backend` directory and add your MongoDB connection string:
 
-    ```
+    ```env
     MONGO_URI=your_mongodb_connection_string
+    PORT=5000
     ```
 
-4.  **Run the backend server**:
+5.  **Run the backend server**:
     ```bash
     npm run dev
     ```
-    The server will start on `http://localhost:5000`.
+    The server will start on `http://localhost:5000` by default.
 
 ### Frontend Setup
 
-1.  **Navigate to the frontend directory** (in a new terminal):
+1.  **Navigate to the frontend directory** (from the root, in a new terminal):
 
     ```bash
     cd frontend
@@ -78,20 +120,43 @@ Follow these instructions to get a copy of the project up and running on your lo
     npm install
     ```
 
-3.  **Run the frontend development server**:
+3.  **Run the frontend app**:
     ```bash
     npm run dev
     ```
     The application will be available at `http://localhost:5173` (or another port if 5173 is in use).
 
+## 📝 API Endpoints
+
+The backend exposes the following RESTful API endpoints under the `/api/products` base path:
+
+| Method   | Endpoint  | Description                 |
+| :------- | :-------- | :-------------------------- |
+| `GET`    | `/`       | Get all products.           |
+| `POST`   | `/create` | Create a new product.       |
+| `PUT`    | `/:id`    | Update an existing product. |
+| `DELETE` | `/:id`    | Delete a product.           |
+
+**Request Body for `POST /create` and `PUT /:id`:**
+
+```json
+{
+  "name": "string",
+  "price": "number",
+  "image": "string"
+}
+```
 
 ## 🤝 Contributing
+
 Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📄 License
+
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgements
+
 - [React](https://react.dev/)
 - [Chakra UI](https://chakra-ui.com/)
 - [Express.js](https://expressjs.com/)
@@ -102,4 +167,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Mongoose](https://mongoosejs.com/)
 
 Thank you for checking out this project! Happy coding! 🚀
-
